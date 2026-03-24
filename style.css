@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial;
+  color: white;
+}
+
+.wire {
+  width: 4px;
+  height: 180px;
+  background: gray;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.bulb {
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.bulb-bottom {
+  width: 40px;
+  height: 30px;
+  background: #888;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bulb.on {
+  background: yellow;
+  box-shadow: 
+    0 0 100px yellow,
+    0 0 200px yellow,
+    0 0 300px yellow;
+}
+
+.switch {
+  position: absolute;
+  right: 200px;
+  top: 200px;
+  width: 60px;
+  height: 100px;
+  background: #bbb;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 30px;
+  height: 50px;
+  background: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  top: 60%;   
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  opacity: 0;
+  transition: 0.5s;
+
+  width: 400px;
+}
+
+.content.show {
+  opacity: 1;
+}
+.content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.content li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.content.show {
+  opacity: 1;
+  text-shadow: 
+    0 0 5px white,
+    0 0 10px yellow,
+    0 0 20px yellow;
+}
+.content {
+  backdrop-filter: blur(2px);
+}
+.switch:hover {
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+.switch:active .btn {
+  transform: translateY(8px);
+}
+.btn {
+  transition: 0.2s;
+}
+.switch.active {
+  box-shadow: 0 0 15px yellow;
+}
