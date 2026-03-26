@@ -105,9 +105,9 @@ body {
 .content.show {
   opacity: 1;
   text-shadow: 
-    0 0 5px white,
-    0 0 10px yellow,
-    0 0 20px yellow;
+    0 0 5px rgb(11, 112, 126),
+    0 0 10px rgb(6, 157, 126),
+    0 0 20px rgb(5, 164, 148);
 }
 .content {
   backdrop-filter: blur(2px);
